@@ -10,14 +10,17 @@ function Main() {
     }
 
     return (
-        <div>
-            <input type="text" placeholder="Enter" value={input} onChange={(e) => setInput(e.target.value)}/>
-            <div>
-                <Button name="Summarize" clickHandler={handleEvent}/>
-                <Button name="Explain" clickHandler={handleEvent}/>
-                <Button name="Quiz" clickHandler={handleEvent}/>
+        <div className = "bigContainer">
+            <div className ="container">
+                <h1 className = "title">StudyBot</h1>
+                <input className = "textInput"type="text" placeholder="Enter" value={input} onChange={(e) => setInput(e.target.value)}/>
+                <div className = "buttonContainer">
+                    <Button name="Summarize" clickHandler={handleEvent}/>
+                    <Button name="Explain" clickHandler={handleEvent}/>
+                    <Button name="Quiz" clickHandler={handleEvent}/>
+                </div>
+                <p className = "textOutput">{output}</p>
             </div>
-            <p>{output}</p>
         </div>
     );
 }
