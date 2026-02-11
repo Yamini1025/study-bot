@@ -4,9 +4,14 @@ import Button from "./Button";
 function Main() {
     const [input, setInput] = useState("");
     const [output, setOutput] = useState("");
+    const [toggle, setToggle] = useState(false);
 
     const handleEvent = () => {
         setOutput("input received");
+    }
+
+    const handleClick = () => {
+        setToggle(!toggle);
     }
 
     return (
@@ -17,8 +22,15 @@ function Main() {
                 <div className = "buttonContainer">
                     <Button name="Summarize" clickHandler={handleEvent}/>
                     <Button name="Explain" clickHandler={handleEvent}/>
-                    <Button name="Quiz" clickHandler={handleEvent}/>
+                    <Button name="Quiz" clickHandler={handleClick}/>
                 </div>
+                <div className = "quizContainer">
+                    {toggle ? 
+                        <div className = "quizButton">
+                            <Button name="5Qs" clickHandler={handleEvent}/>
+                            <Button name="10Qs" clickHandler={handleEvent}/>
+                        </div> : null}
+                    </div>
                 <p className = "textOutput">{output}</p>
             </div>
         </div>

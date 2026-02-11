@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 700px;
+    width: 900px;
 }
 
 .bigContainer {
@@ -59,4 +59,16 @@
     font-size: 15px;
     color: black;
     padding: 20px 0px;
+}
+
+.quizButton { 
+    display:flex;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.quizContainer {
+    display: flex;
+    width: 1120px;
+    justify-content:right;
 }
